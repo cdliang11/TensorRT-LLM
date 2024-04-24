@@ -977,7 +977,7 @@ def preprocess_weights(
                 weights[name] = torch.tensor([1.0], dtype=torch.float32)
 
     # If layer_norm bias is None. (For MPT and DBRX)
-    if model_config.architecture in ['MPTForCausalLM', 'DbrxForCausalLM']:
+    if model_config.architecture in ['MPTForCausalLM', 'DbrxForCausalLM', 'DeepseekMoeForCausalLM']:
         update_dict = {}
         for name, param in weights.items():
             if 'input_layernorm.weight' in name and name.replace(

@@ -32,6 +32,7 @@ from .mpt.model import MPTForCausalLM, MPTModel
 from .opt.model import OPTForCausalLM, OPTModel
 from .phi.model import PhiForCausalLM, PhiModel
 from .qwen.model import QWenForCausalLM
+from .deepseek_moe.model import DeepseekMoeForCausalLM
 
 __all__ = [
     'BertModel',
@@ -69,6 +70,7 @@ __all__ = [
     'SkyworkForCausalLM',
     'GemmaForCausalLM',
     'DbrxForCausalLM',
+    'DeepseekMoeForCausalLM',
 ]
 
 MODEL_MAP = {
@@ -94,4 +96,5 @@ MODEL_MAP = {
     'EncoderModel': EncoderModel,
     'DecoderModel': DecoderModel,
     'DbrxForCausalLM': DbrxForCausalLM,
+    'DeepseekMoeForCausalLM': DeepseekMoeForCausalLM,
 }
